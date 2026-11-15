@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مساحة للحب، الضحك، والصور الحلوة ❤️</title>
+    <title>مساحة الضحك والوناسة العمانية ❤️😂</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
             margin: 0;
             padding: 20px;
             display: flex;
@@ -15,44 +15,85 @@
             align-items: center;
             min-height: 100vh;
             color: #333;
+            overflow-x: hidden;
+            position: relative;
         }
+
+        /* قلوب متطايرة في الخلفية */
+        .heart-bg {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            animation: floatUp 4s infinite linear;
+            z-index: 0;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0.8); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+
         .container {
             background: rgba(255, 255, 255, 0.95);
             padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
             text-align: center;
             max-width: 600px;
             width: 100%;
+            position: relative;
+            z-index: 1;
         }
+
         h1 {
             color: #d63384;
             margin-bottom: 10px;
             font-size: 24px;
         }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
+
+        .oman-quote {
+            background: #fff0f3;
+            border: 2px dashed #ffb3c1;
+            padding: 15px;
+            border-radius: 15px;
             margin-bottom: 20px;
+            font-size: 18px;
+            color: #b5179e;
+            font-weight: bold;
+            line-height: 1.6;
         }
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin-bottom: 20px;
         }
+
         .gallery img {
             width: 100%;
             height: 160px;
             object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
             transition: transform 0.3s;
+            border: 3px solid #ffccd5;
         }
+
         .gallery img:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
         }
+
+        .counter-box {
+            background: #ffe5ec;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #7209b7;
+            font-weight: bold;
+        }
+
         button {
             background-color: #ff4d6d;
             color: white;
@@ -62,19 +103,25 @@
             border-radius: 25px;
             cursor: pointer;
             transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
         }
+
         button:hover {
             background-color: #c9184a;
             transform: scale(1.05);
         }
+
         #secret-message {
             margin-top: 15px;
             font-weight: bold;
-            color: #6a040f;
+            color: #590d22;
             display: none;
             animation: fadeIn 0.5s ease-in-out;
+            background: #ffccd5;
+            padding: 12px;
+            border-radius: 10px;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -83,26 +130,52 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>✨ أهلاً بك في مساحة الضحك والحب ✨</h1>
-        <p>مكان مخصص للأجواء الحلوة، الصحبة الجميلة، والذكريات اللي تخلي الابتسامة ما تفارق الوجه! 😄❤️</p>
+    <!-- قلوب متحركة -->
+    <div class="heart-bg" style="left: 10%; animation-delay: 0s;">❤️</div>
+    <div class="heart-bg" style="left: 30%; animation-delay: 2s;">💖</div>
+    <div class="heart-bg" style="left: 60%; animation-delay: 1s;">✨</div>
+    <div class="heart-bg" style="left: 80%; animation-delay: 3s;">❤️</div>
 
-        <!-- شبكة عرض الصور الموجودة في مستودعك -->
-        <div class="gallery">
-            <img src="1.jpg" alt="ذكريات 1">
-            <img src="2.jpg" alt="ذكريات 2">
-            <img src="3.jpg" alt="ذكريات 3">
-            <img src="4.jpg" alt="ذكريات 4">
+    <div class="container">
+        <h1>✨ مساحة الضحك والروقان العماني ✨</h1>
+        
+        <!-- الاقتباس العماني اللي طلبته -->
+        <div class="oman-quote">
+            "انتي سفلة صغيرة ما عاقلة.. عوين شايفه نفسها وطولها 150! 😂❤️"
         </div>
 
-        <button onclick="showSurprise()">اضغط هنا لرسالة خاصة 🎁</button>
+        <!-- صور الموقع الأربع -->
+        <div class="gallery">
+            <img src="1.jpg" alt="صورة 1">
+            <img src="2.jpg" alt="صورة 2">
+            <img src="3.jpg" alt="صورة 3">
+            <img src="4.jpg" alt="صورة 4">
+        </div>
+
+        <div class="counter-box">
+            نسبة العقل والرزانة حالياً: <span id="counter" style="color: #ff006e; font-size: 18px;">0%</span> (وطبعا نازلة زيادة مع الطول! 📏😂)
+        </div>
+
+        <button onclick="showSurprise()">اضغط هنا للسر الخفي 🎁</button>
 
         <div id="secret-message">
-            <p>😂 شكلك صدقت إن فيه رسالة رسمية؟<br>المهم: الله لا يحرِمنا من الضحكة والوناسة والصحبة الطيبة دايم الدوم! ❤️🙌</p>
+            تقولي عاقلة؟ والمقالب والضحك والوناسة وين راحت؟<br>عموماً الله لا يحرِمنا من هالكشتات والضحكة الطيبة دايم الدوم! ❤️🙌
         </div>
     </div>
 
     <script>
+        // عداد تفاعلي يتحرك بخفة
+        let count = 0;
+        let target = 2; // نسبة عقل وهمية بسيطة هخخخ
+        let interval = setInterval(() => {
+            if(count <= target) {
+                document.getElementById('counter').innerText = count + '%';
+                count++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 300);
+
         function showSurprise() {
             var msg = document.getElementById('secret-message');
             if (msg.style.display === 'none' || msg.style.display === '') {
@@ -115,3 +188,4 @@
 
 </body>
 </html>
+
